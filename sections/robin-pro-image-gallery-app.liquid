@@ -1,0 +1,38 @@
+{% for block in section.blocks %}
+  <div {{ block.shopify_attributes }}>
+    <div class="robin-pro" id="{{ block.settings.gallery_id }}"></div>
+  </div>
+{% endfor %}
+
+
+{% schema %}
+  {
+    "name": "Robin PRO Image Gallery",
+    "blocks": [
+      {
+        "type": "gallery",
+        "name": "Gallery",
+        "settings": [
+          {
+            "label": "Gallery",
+            "type": "select",
+            "id": "gallery_id",
+            "options": [
+{
+  "value": "5b45a326-3063-445d-9a8f-9b8eb0e85c54",
+  "label": "Referencie"
+}
+            ]
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Galleries",
+        "category": "Robin PRO Image Gallery App",
+        "settings": {}
+      }
+    ]
+  }
+{% endschema %}
